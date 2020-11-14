@@ -1,11 +1,13 @@
+require('dotenv').config();
 //CONST
 const PORT          = process.env.PORT || 3000
-const DB_URL        = 'mongodb+srv://dmitryv2:tuaw4mqg2t@cluster0.a0lwf.mongodb.net/nodels1?retryWrites=true&w=majority'
+const DB_URL        = process.env.DB_URL
 //Modules
 const express       = require('express')
 const cors          = require('cors')
 const bodyParser    = require('body-parser')
 const mongoose      = require('mongoose')
+
 
 //Routes exports
 const roleRoute     = require('./src/routes/role.routes')
